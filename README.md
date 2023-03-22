@@ -31,6 +31,8 @@ For classifiers, the performance can set as `accuracy` , `f1_score` , `precision
 
 (The charts is an classifier selection example using Iris dataset)
 
+![1679444303986](image/README/1679444303986.png)
+
 ![1679443565646](image/README/1679443565646.png)
 
 ![1679443664816](image/README/1679443664816.png)
