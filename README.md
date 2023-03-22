@@ -4,7 +4,7 @@ This package aims to facilitate model selection in Machine Learning. It is a com
 
 # Usage
 
-`pip install mlms`
+`pip install mlms -U`
 
 Then instantiate and use it like this:
 
@@ -28,3 +28,9 @@ For classifiers, the performance can set as `accuracy` , `f1_score` , `precision
 * `('SGDC', SGDClassifier(n_jobs=-1)),`
 * `('GPC', GaussianProcessClassifier(n_jobs=-1)),`
 * `('PAC', PassiveAggressiveClassifier(n_jobs=-1))`
+
+(The charts is an classifier selection example using Iris dataset)
+
+![1679443565646](image/README/1679443565646.png)
+
+![1679443664816](image/README/1679443664816.png)
