@@ -6,7 +6,7 @@ This package aims to facilitate model selection in Machine Learning. It is a com
 
 `pip install mlms -U`
 
-`https://pypi.org/project/mlms/`
+[pypi package](https://pypi.org/project/mlms/)
 
 Then instantiate and use it like this:
 
