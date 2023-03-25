@@ -12,11 +12,15 @@ Then instantiate and use it like this:
 
 `from mlms.ModelSelection import Select_Regressor, Select_Classifier`
 
-`df_performance, fitted_classifiers = Select_Classifier('accuracy', 10, X_train, X_test, y_train, y_test)`
+Select some models to tune, this list should be the abbreviation of models as below, for example
+
+`MODELS = ['LGR', 'AB', 'CART', 'GBC', 'XGBC', 'RFC', 'ETC', 'KNN', 'NB', 'SVC', 'MLP', 'SGDC', 'GPC', 'PAC']`
+
+`df_performance, fitted_classifiers = Select_Classifier('accuracy', 10, X_train, X_test, y_train, y_test, MODELS)`
 
 `df_performance, fitted_regressors = Select_Classifier('neg_mean_squared_erro', 10, X_train, X_test, y_train, y_test)`
 
-For classifiers, the performance can set as `accuracy` , `f1_score` , `precision`, `recall`, `roc_auc` and so on. Available classifiers are below
+For classifiers, the performance can set as `accuracy` , `'f1_score` , `precision`, `recall`, `roc_auc` , `balanced_accuracy_score` and so on. Available classifiers are below
 
 * `('LGR', LogisticRegression(n_jobs=-1))`,
 * `('AB', AdaBoostClassifier())`,
@@ -54,5 +58,15 @@ For regressors, the performance can set as `r2_score`, `neg_mean_squared_error` 
 - `('ETR', ExtraTreesRegressor())`
 
 ![1679487197758](image/README/1679487197758.png)
+
+Additonally, this package also alow users to plot ROC_Curve
+
+`from mlms.plot_roc_curve import Multiclass_ROC_Curve, Binary_ROC_Curve`
+
+`Multiclass_ROC_Curve(X_test, y_test, fitted_model, chart_title:str)`
+
+![1679785680784](image/README/1679785680784.png)
+
+`Binary_ROC_Curve(y_true, y_pred,chart_name:str)`
 
 [GitHub](https://github.com/HigherHoopern/ML_ModelSelection)
